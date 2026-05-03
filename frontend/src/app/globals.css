@@ -1,0 +1,119 @@
+:root {
+  /* Colors */
+  --primary-color: #2e7d32; /* Warm Green */
+  --primary-hover: #1b5e20;
+  --secondary-color: #f57f17; /* Warm Orange/Yellow */
+  --background-color: #fbfbfb;
+  --surface-color: #ffffff;
+  --text-primary: #1c1c1e;
+  --text-secondary: #4a4a4f;
+  --error-color: #d32f2f;
+  --border-color: #e0e0e0;
+  
+  /* Typography */
+  --font-family: 'Inter', 'Roboto', sans-serif;
+  --base-font-size: 18px; /* Large default for accessibility */
+  --h1-size: 2.5rem;
+  --h2-size: 2rem;
+  --h3-size: 1.5rem;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* Layout */
+  --border-radius: 12px; /* Soft edges */
+  --box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #81c784;
+    --primary-hover: #a5d6a7;
+    --secondary-color: #fff59d;
+    --background-color: #121212;
+    --surface-color: #1e1e1e;
+    --text-primary: #f5f5f7;
+    --text-secondary: #c8c8cc;
+    --border-color: #333333;
+    --box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--base-font-size);
+  color: var(--text-primary);
+  background-color: var(--background-color);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+}
+
+h1 { font-size: var(--h1-size); }
+h2 { font-size: var(--h2-size); }
+h3 { font-size: var(--h3-size); }
+
+p {
+  margin-bottom: var(--spacing-sm);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+  color: var(--primary-hover);
+}
+
+button {
+  font-family: var(--font-family);
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.card {
+  background-color: var(--surface-color);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--border-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+}
